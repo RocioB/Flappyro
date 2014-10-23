@@ -18,5 +18,11 @@ public class menuScript : MonoBehaviour {
 			animacion_panel.SetBool ("muestraMenu", true);
 	}
 }
-
+	public void restart () {
+				animacion_panel.SetBool ("muestraMenu", false);
+				Application.LoadLevel(Application.loadedLevel);
+		}
+	public void quit () {
+				Application.Quit ();
+		}
 }
