@@ -13,14 +13,16 @@ public class generadorScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!GameControl.dead){
 	if (Time.time > timer) {
-			var altura= Random.Range(-1.5f,1.5f);
-			var nuevacolumna = (GameObject)Instantiate(columna,new Vector3 (position.x, position.y+altura, position.z), transform.rotation);
+			var altura= Random.Range(-2.0f,2.0f);
 
+			var nuevacolumna = (GameObject)Instantiate(columna,new Vector3 (position.x, position.y+altura, position.z), transform.rotation);
+			
 			Destroy(nuevacolumna, tiempoespera*3);
 
 			timer = Time.time+tiempoespera;
-	
+			}
 		}
 	}
 }
