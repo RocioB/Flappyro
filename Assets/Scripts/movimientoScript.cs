@@ -25,6 +25,16 @@ public class movimientoScript: MonoBehaviour {
 		                                //   vvertical*0.01f);
 				}
 
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		Debug.Log("Estoy muerto");
+		if(!GameControl.dead){
+			GameControl.dead = true;
+			//AudioSource.PlayClipAtPoint(deadSound, transform.position);
+			Debug.Log("Estoy muerto");
+			restart ();
+		}
+
 		
 	
 	}

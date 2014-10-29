@@ -17,7 +17,7 @@ public class scoreUp : MonoBehaviour {
 		GameControl.score = GameControl.score + 1;
 		Debug.Log (GameControl.score);
 		
-		texto.text = "Score " + GameControl.score.ToString ();
+		texto.text = "Score 20" + GameControl.score.ToString ();
 		textoFinal.text = "Score " + GameControl.score.ToString ();
 	}
 	
